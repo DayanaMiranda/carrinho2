@@ -1,0 +1,26 @@
+.container-items {
+    width: 485px;
+    height: 500px;
+    overflow: hidden;
+    overflow-y: scroll;
+    
+}
+
+.container-items .cart {
+    border:none;
+    display:flex;
+    align-items:end;
+    font-size: 0.7rem;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.24);
+    padding-bottom: 10px;
+}
+
+.container-items .cart button {
+    height: 40px;
+    border: none;
+    color: grey;
+    background: #fff;  
+}
+.cart-image {
+    width: 150px;
+}
