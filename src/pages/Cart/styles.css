@@ -24,3 +24,35 @@
 .cart-image {
     width: 150px;
 }
+
+.return-policy .p1 {
+    border-bottom: 1px solid rgba(0, 0, 0, 0.24);
+    font-weight: 600;
+}
+
+.p2, .p3, .order, .subtotal, .delivery  {
+    font-weight: 600;    
+}
+
+.p3{
+    margin-top: 10px;
+}
+
+.delivery {
+    border-bottom: 1px solid rgba(0, 0, 0, 0.24);
+}
+
+
+.section-cart {
+    margin-left: 30px;
+}
+
+.btn-finish {
+    width: 400px;
+    height: 48px;
+    background-color:#D3780C;
+    border:none;
+    border-radius: 6px;
+}
+
+
