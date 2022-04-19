@@ -30,8 +30,8 @@
     font-weight: 600;
 }
 
-.p2, .p3, .order, .subtotal, .delivery  {
-    font-weight: 600;    
+.p2, .p3, .order, .subtotal, .delivery, .item-title  {
+    font-weight: 700;    
 }
 
 .p3{
@@ -54,5 +54,20 @@
     border:none;
     border-radius: 6px;
 }
+
+.teste {
+    display: flex;
+    flex-direction: column;  
+    justify-content: space-around;
+}
+
+.teste2 {
+    display: flex;
+}
+
+p {
+    margin: 0;
+}
+
 
 

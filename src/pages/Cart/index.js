@@ -41,55 +41,58 @@ export default function Cart() {
   }
 
   return (
-    <div className="section-cart">
 
-      <h3>Carrinho</h3>
-      {/* <p>{JSON.stringify(productsCart)}</p> */}
+    <div className="section-cart container">
+
+      <div className="cart-title"><h3>Carrinho</h3></div>
 
 
-      <div className="container-items">
-        {
-          products.map((product) => (
-            <div key={product.id} className="cart">
+<div className="teste2">
+      <div className="teste">
+        <div className="container-items">
+          {
+            products.map((product) => (
+              <div key={product.id} className="cart">
 
-              <div className="cart-image">
-                <img className="img-fluid" src={product.image} alt={product.title} />
+                <div className="cart-image">
+                  <img className="img-fluid" src={product.image} alt={product.title} />
+                </div>
+                <div>
+                  <p className="item-title">{product.title}</p>
+                  <p>{product.category.name}</p>
+                  <p>Quantidade: {productsCart.find(item => item.id === product.id).quantity}</p>
+                  <p>R$ {product.price}</p>
+                </div>
+                <button onClick={() => removeProductToCart(product.id)}>Remover</button>
               </div>
-              <div>
-                <h2>{product.title}</h2>
-                <p>{product.category.name}</p>
-                <p>Quantidade: {productsCart.find(item => item.id === product.id).quantity}</p>
-                <p>{product.price}</p>
-              </div>
-              <button onClick={() => removeProductToCart(product.id)}>Remover</button>
-            </div>
-          ))
-        }
+            ))
+          }
+
+
+        </div>
+
+        <div className="return-policy">
+          <p className="p1">Política de devolução</p>
+          <p className="p2">O que posso devolver?</p>
+          <p className="p5">O que posso devolver?Você pode devolver a maioria dos itens novos não abertos vendidos pela merctech.com.br dentro do prazo de 30 dias após a entrega para obter um reembolso total.</p>
+          <p className="p3">Quando vou receber meu reembolso?</p>
+          <p className="p4">Para cartão de crédito, pode levar até 2 faturas; para Boleto, até 3 dias úteis através da conta bancária fornecida.</p>
+        </div>
+
       </div>
-      
+
       <div className="order-container">
         <p className="order">Pedido</p>
-
         <form>
           <input name="name" type="text" value="Cupom de desconto" /> <br />
         </form>
-
         <p className="subtotal">Subtotal: R$ {sum}</p>
         <p className="delivery">Frete: R$ 0.00</p>
         <p nameClass="final-value">R$ {sum}</p>
-
         <button className="btn-finish">Finalizar pedido</button>
       </div>
+  </div>      
 
-      {/* <p>Soma: {sum}</p> */}
-
-      <div className="return-policy">
-        <p className="p1">Política de devolução</p>
-        <p className="p2">O que posso devolver?</p>
-        <span>O que posso devolver?Você pode devolver a maioria dos itens novos não abertos vendidos pela alterarnome.com.br dentro do prazo de 30 dias <br />após a entrega para obter um reembolso total.</span>
-        <p className="p3">Quando vou receber meu reembolso?</p>
-        <p className="p4">Para cartão de crédito, pode levar até 2 faturas; para Boleto, até 3 dias úteis através da conta bancária fornecida.</p>
-      </div>
 
     </div>
 
